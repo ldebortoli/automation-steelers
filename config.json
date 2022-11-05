@@ -1,0 +1,4 @@
+{
+    "browsers": ["Chrome", "Firefox"],
+    "headless": false
+}
