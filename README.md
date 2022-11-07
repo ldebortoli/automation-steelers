@@ -10,3 +10,8 @@ Install
 
 Run:
 $ pipenv run python -m pytest
+
+Add -n logical to run in parallel execution
+
+Run bash script (uses parallel ):
+$ bash run.sh -b "chrome firefox"

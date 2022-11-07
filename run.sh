@@ -30,7 +30,7 @@ for browser in $browsers; do
 
     # Run the tests with the params
     echo -e "\n\n------ START TESGING ON ${OS} USGING ${browser} BROWSER ------\n\n" | tr a-z A-Z;
-    pipenv run python3 -m pytest --browser=${browser}
+    pipenv run python3 -m pytest -n logical --browser=${browser}
     echo -e "\n\n------ TESTING ON ${OS} USING ${browser} BROWSER FINISHED ------" | tr a-z A-Z;
 
 done
