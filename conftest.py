@@ -38,8 +38,8 @@ def driver(args):
     # Set Up driver
     driver = browser_selection(args["browser"])
     driver.maximize_window()
-    driver.get("https://www.google.com")
-    
+    driver.get("https://www.steelers.com/schedule/")
+
     yield driver
 
     driver.quit()
@@ -47,9 +47,13 @@ def driver(args):
 
 def browser_selection(browser):
     if browser == "chrome":
-        driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+        driver = webdriver.Chrome(
+            service=ChromeService(ChromeDriverManager().install())
+        )
     elif browser == "firefox":
-        driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
+        driver = webdriver.Firefox(
+            service=FirefoxService(GeckoDriverManager().install())
+        )
     elif browser == "edge":
         driver = None
     elif browser == "opera":
